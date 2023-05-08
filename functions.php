@@ -4,12 +4,24 @@
  * 
  * @package Wpcelal
  */
+
+use WPCELAL_THEME\Inc\WPCELAL_THEME;
+
 ?>
 <?php 
 
+if(!defined("WPCELAL_DIR_PATH")){
+    define("WPCELAL_DIR_PATH", untrailingslashit(get_template_directory()));
+}
 // echo "<pre>";
-// print_r(filemtime(get_template_directory()."/style.css"));
+// print_r(WPCELAL_DIR_PATH);
 // wp_die();
+require_once WPCELAL_DIR_PATH."/inc/helpers/autoloader.php";
+
+function wpcelal_get_theme_instance(){
+    WPCELAL_THEME::get_instace();
+}
+ wpcelal_get_theme_instance();
 function wpcelal_enqueue_scripts(){
     //Register Styles.
     wp_register_style("style",get_template_directory_uri()."/style.css",[],filemtime(get_template_directory()."/style.css"),"all");
