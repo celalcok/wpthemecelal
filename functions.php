@@ -17,7 +17,7 @@ function wpcelal_enqueue_scripts(){
     
     //Register Scripts
     wp_register_script("main",get_template_directory_uri()."/assets/main.js",[],filemtime(get_template_directory()."/assets/main.js"), true);
-    wp_register_script("main",get_template_directory_uri()."/assets/src/library/css/bootstrap.min.js",["jquery"],false, true);
+    wp_register_script("bootstrap",get_template_directory_uri()."/assets/src/library/js/bootstrap.min.js",["jquery"],false, true);
     
     //Enqueue Styles
     wp_enqueue_style("style");

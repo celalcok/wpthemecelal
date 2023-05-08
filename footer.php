@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Footer file.
  * 
@@ -7,6 +8,9 @@
  */
 wp_footer();
 ?>
-	<footer>Footer</footer>
+</div>
+</div>
+<footer>Footer</footer>
 </body>
+
 </html>
